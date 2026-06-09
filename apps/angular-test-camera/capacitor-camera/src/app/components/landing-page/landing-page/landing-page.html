@@ -1,0 +1,62 @@
+<div class="landing-page d-flex flex-column align-items-center justify-content-center vh-100 text-white">
+  <h1 class="header">Capacitor AI Camera Tool</h1>
+
+  <!-- Capture Card -->
+  <div class="card text-dark mb-3" style="width: 18rem">
+    <div class="card-body">
+      <p class="card-text">Take Picture</p>
+      <button class="btn btn-primary w-100" (click)="takePhotoAndDetectColor()">
+        Take Picture
+      </button>
+    </div>
+  </div>
+
+  <!-- Save Card -->
+  <div class="card text-dark mb-3" style="width: 18rem">
+    <div class="card-body">
+      <p class="card-text">Save Picture< /p>
+      <button class="btn btn-success w-100" (click)="savePhoto()">
+        Save Picture
+      </button>
+    </div>
+  </div>
+
+  <!-- AI Action Card -->
+  <div class="card text-dark" style="width: 18rem">
+    <div class="card-body">
+      <p class="card-text">Detect & Change Color</p>
+      <button class="btn btn-warning w-100" (click)="detectAndChangeColor()">
+        Detect & Change
+      </button>
+    </div>
+  </div>
+
+  @if (photoData) {
+    <div class="mt-4">
+      <h5>Preview:</h5>
+      <img 
+        [src]="photoData" 
+        alt="Photo preview" 
+        class="img-fluid border border-white" 
+        style="max-width: 150px; max-height: 150px; object-fit: cover; border-radius: 8px;" 
+      />
+    </div>
+  }
+
+  <!-- if syntax for Color Detection -->
+  @if (detectedColor) {
+    <div class="mt-3 text-center">
+      <p>Detected Color: {{ detectedColor }}</p>
+      <div
+        [style.background]="detectedColor"
+        style="width: 80px; height: 80px; border-radius: 50%; margin: auto"
+      ></div>
+    </div>
+  } @else {
+    <p class="mt-3 text-muted">No color detected yet.</p>
+  }
+
+  <div class="card flex justify-center mt-3">
+    <p-colorpicker [(ngModel)]="color" />
+  </div>
+</div>
