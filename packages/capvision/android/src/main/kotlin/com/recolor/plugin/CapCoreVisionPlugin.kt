@@ -17,8 +17,8 @@ import com.google.mlkit.vision.segmentation.subject.SubjectSegmenterOptions
 import java.nio.ByteBuffer
 import android.util.Base64
 
-@CapacitorPlugin(name = "Recolor")
-class RecolorPlugin : Plugin() {
+@CapacitorPlugin(name = "CapCoreVision")
+class CapCoreVisionPlugin : Plugin() {
 
     @PluginMethod
 

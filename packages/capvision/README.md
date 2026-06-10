@@ -7,13 +7,13 @@ Native on-device object segmentation and transformation for Capacitor apps.
 To use npm
 
 ```bash
-npm install recolor-plugin
+npm install @capcore/vision
 ````
 
 To use yarn
 
 ```bash
-yarn add recolor-plugin
+yarn add @capcore/vision
 ```
 
 Sync native files
