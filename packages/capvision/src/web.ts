@@ -1,9 +1,17 @@
 import { WebPlugin } from '@capacitor/core';
+import type { CapCoreVisionPlugin } from './definitions';
 
-import type { CapCoreVisionWeb } from './definitions';
+export class CapCoreVisionWeb extends WebPlugin implements CapCoreVisionPlugin {
+  async createSession(_options: { imageBase64: string }): Promise<{ sessionId: string }> {
+    console.log('createSession called - web stub');
+    throw new Error("CapCoreVision plugin features are not supported on web fallbacks.");
+  }
 
-export class CapCoreVisionWeb extends WebPlugin implements CapCoreVisionWeb {
-async detectColor(_options: { imageBase64: string }): Promise<{ detectedColor: string }> {
-  console.log('detectColor called - web stub');
-throw new Error("Recolor plugin not supported on web");}
+  async getDominantColor(_options: { sessionId: string }): Promise<{ detectedColor: string }> {
+    throw new Error("CapCoreVision plugin features are not supported on web fallbacks.");
+  }
+
+  async recolor(_options: { sessionId: string; targetColor: string }): Promise<{ imageBase64: string }> {
+    throw new Error("CapCoreVision plugin features are not supported on web fallbacks.");
+  }
 }
