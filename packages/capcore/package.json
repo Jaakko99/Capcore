@@ -1,0 +1,7 @@
+{
+  "name": "@capcore/core",
+  "version": "1.0.0",
+  "description": "Foundational system layer for CapCore framework.",
+  "main": "index.js",
+  "private": true
+}
