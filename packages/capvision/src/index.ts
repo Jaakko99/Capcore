@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { RecolorPlugin } from './definitions';
+import type { CapCoreVisionWeb } from './definitions';
 
-const Recolor = registerPlugin<RecolorPlugin>('Recolor', {
-  web: () => import('./web').then((m) => new m.RecolorWeb()),
+const CapCoreVision = registerPlugin<CapCoreVisionWeb>('CapCoreVision', {
+  web: () => import('./web').then((m) => new m.CapCoreVisionWeb()),
 });
 
 export * from './definitions';
-export { Recolor };
+export { CapCoreVisionWeb };
