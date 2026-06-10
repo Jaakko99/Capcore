@@ -6,6 +6,7 @@ CapCore is a modular, high-performance suite of native mobile plugins designed t
 
 | Package | Status | Description |
 | :--- | :--- | :--- |
+| **[`@capcore/core`](./packages/capcore)** | ⚙️ Base | The foundational core engine. Manages global lifecycle initializations, cross-plugin logging utilities, and shared native types. |
 | **[`@capcore/vision`](./packages/capvision)** | 🔬 Alpha | A native Capacitor plugin for on-device object segmentation and recoloring. Uses ML Kit (Android) and CoreML (iOS) to isolate and recolor objects in images—entirely on-device, no data leaves the phone. |
 
 ## 🧪 Playgrounds & Testing
